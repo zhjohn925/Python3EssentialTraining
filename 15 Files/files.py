@@ -24,6 +24,7 @@ def main2():
     print('Done.')    
         
 #large file. do not want to read line by line to copy
+#instead, use buffer I/O
 #copy file        
 def main3():
     buffersize = 50000
