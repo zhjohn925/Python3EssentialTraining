@@ -2,6 +2,7 @@
 
 #string is object
 #string is immutable
+#http://docs.python.org/py3k/library/stdtypes.html
 
 def main():
     #string variable is a reference to the string
@@ -44,5 +45,12 @@ def main():
     'thisisastring'.isalpha() #True
     '12345'.isdigit() #True
     s1.isprintable() #True  
+    #split with white space
+    s = 'This is a string of words'
+    w = s.split()
+    s.split(i)
+    #join
+    new = ':'.join(w)
+    
 
 if __name__ == "__main__": main()
