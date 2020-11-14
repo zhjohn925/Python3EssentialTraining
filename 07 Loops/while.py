@@ -11,5 +11,13 @@ def main():
     while b < 50:
         print(b, end=' ')
         a, b = b, a + b
+    #Use 'else' in while loop. when expression is false, do else   
+    s = 'this is a string'
+    i = 0
+    while (i < len(s)) :
+        print(s[i], end='')
+        i += 1
+    else :
+        print('else')
 
 if __name__ == "__main__": main()
