@@ -1,10 +1,11 @@
 #!/usr/bin/python3
-# while.py by Bill Weinman [http://bw.org/]
-# This is an exercise file from Python 3 Essential Training on lynda.com
-# Copyright 2010 The BearHeart Group, LLC
+
+# while expression
 
 def main():
     # simple fibonacci series
+    # The sequence starts with F1=0, F2=1, and the recurrence Fn = Fn−1 + Fn−2 is valid for n > 2
+    # 0,1,1,2,3,5,8,13,21,34,55,89,144,...
     # the sum of two elements defines the next set
     a, b = 0, 1
     while b < 50:
