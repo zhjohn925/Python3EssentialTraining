@@ -33,5 +33,15 @@ def main():
     x.pop(0) #pop the beginning
     d = {'one' : 1, 'two': 2, 'three':3}
     d = dict(one=1, two=2, three=3)  #constructor, easier to create dict object
+    for k in d: print(k)
+    for k, v in d.items() : print(k, v)
+    d['three']  #bad good, if no key, get exception
+    d.get('three') #good way
+    d.get('three', 'not found')
+    del x['four']
+    x.pop('five')
+    #bytes and byte array (one byte=8-bit of data)
+    
+    
 
 if __name__ == "__main__": main()
