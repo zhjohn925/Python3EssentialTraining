@@ -46,6 +46,24 @@ def main():
     id(y)
     x == y   #test values of objects 
     x is y   #test identities of objects
+    True and False
+    True and True
+    False or True
+    False or False
+    True & True  #bitwise
+    True & False #bitwise
+    #slice operator
+    list = [1,2,3,4,5,6,7,8,9]
+    list[0]
+    list[len(list)-1]
+    list[-1]
+    list[0:5]
+    range(0, 10)
+    for i in range(0,10): print(i)   #the last index is excluded
+    list[:] = range(20)
+    list[1:15:3]   #every other 3
+    list[1:15:3] = (99, 99, 99, 99)
+    
     
 
 if __name__ == "__main__": main()
