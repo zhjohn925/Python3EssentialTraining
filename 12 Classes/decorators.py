@@ -1,7 +1,6 @@
 #!/usr/bin/python3
-# classes.py by Bill Weinman [http://bw.org/]
-# This is an exercise file from Python 3 Essential Training on lynda.com
-# Copyright 2010 The BearHeart Group, LLC
+
+#Use decorator in the object.  used  to access database
 
 class Duck:
     def __init__(self, **kwargs):
@@ -18,9 +17,22 @@ class Duck:
 
     def get_property(self, key):
         return self.properties.get(key, None)
+    
+    @property
+    def color(slef) :
+        return self.properties.get('color', None)
+    
+    @color.setter
+    def color(self, c) :
+        self.properties['color'] = c    #save to database
+        
+    @color.deleter
+    def color(self):
+        del self.properties['color']   #delete from database
 
 def main():
-    donald = Duck(color = 'blue')
-    print(donald.get_property('color'))
+    donald = Duck()
+    donald.color = 'blue'
+    print(donald.color)
 
 if __name__ == "__main__": main()
