@@ -3,6 +3,8 @@
 import sys
 import time
 
+#Write your own module
+
 __version__ = "1.1.0"
 
 class numwords():
