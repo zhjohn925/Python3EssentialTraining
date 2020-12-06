@@ -39,9 +39,12 @@ def main():
     print(now)
     print(now.year, now.month, now.day, now.hour, now.minute, now.second, now.microsecond)
     
-# third party modules
+# third party modules, use other people' works
 # http://pypi.python.org/pypi
 #     "Python 3 packages"
-# As example, try to install "bitstring.py"          
+# As example, try to install "bitstring.py"      
+     import bitstring
+     a = bitstring.BitString(bin = '01010101')
+     print(a.hex, a.bin, a.uint)
 
 if __name__ == "__main__": main()
