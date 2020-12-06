@@ -4,6 +4,11 @@
 # http://docs.python.org/py3k/library/index.html 
 # provides liable, efficient, and rich modules
 
+# third party modules
+# http://pypi.python.org/pypi
+#     "Python 3 packages"
+# As example, try to install "bitstring.py"
+
 import sys
 
 def main():
@@ -33,6 +38,10 @@ def main():
     now = datetime.datetime.now()
     print(now)
     print(now.year, now.month, now.day, now.hour, now.minute, now.second, now.microsecond)
-          
+    
+# third party modules
+# http://pypi.python.org/pypi
+#     "Python 3 packages"
+# As example, try to install "bitstring.py"          
 
 if __name__ == "__main__": main()
