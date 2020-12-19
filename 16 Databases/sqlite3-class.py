@@ -1,10 +1,14 @@
 #!/usr/bin/python3
 
+# write class to use in other module or other place
+# when be imported, if __name__ == "__main__" is no more True, so main() is really for test purpose. 
 
 import sqlite3
 
 class database:
     def __init__(self, **kwargs):
+        #here variables' name is not with "_" prefix
+        #we want to allow the variable access from outside
         self.filename = kwargs.get('filename')
         self.table = kwargs.get('table', 'test')
     
@@ -35,11 +39,14 @@ class database:
         for row in cursor:
             print('  {}: {}'.format(row['t1'], row['i1']))
 
+    # generator function.  use as "for loop"        
     def __iter__(self):
+        # can not use ? as place holder for table name. but use {}
         cursor = self._db.execute('select * from {} order by t1'.format(self._table))
         for row in cursor:
             yield dict(row)
 
+    #property decorator        
     @property
     def filename(self): return self._filename
 
@@ -50,7 +57,7 @@ class database:
         self._db.row_factory = sqlite3.Row
 
     @filename.deleter
-    def filename(self): self.close()
+    def filename(self): self.close()  #close the database
 
     @property
     def table(self): return self._table
