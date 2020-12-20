@@ -2,7 +2,7 @@
 
 # iterable class / object
 
-class inclusive_range:
+class Inclusive_range:
     def __init__(slef, *args) :
         numargs = len(args)
         if numargs < 1 : raise TypeError('requires at least one argument')
@@ -24,7 +24,7 @@ class inclusive_range:
            i += self.step    # yield to next call starts from the same point from last return
             
 def main():
-    o = inclusive_range(0, 25, 1)
+    o = Inclusive_range(0, 25, 1)   # constructor
     for i in o: print(i, end = ' ')
 
 if __name__ == "__main__": main()
